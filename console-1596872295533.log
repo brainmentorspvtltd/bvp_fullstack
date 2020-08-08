@@ -1,0 +1,223 @@
+var a;
+undefined
+a;
+undefined
+typeof a;
+"undefined"
+a = 100;
+100
+typeof a;
+"number"
+a=100.20;
+100.2
+typeof a;
+"number"
+var x = 1000;
+undefined
+typeof x;
+"number"
+var w = 100;
+undefined
+w;
+100
+f = 7777;
+7777
+10+5
+15
+10>2
+true
+typeof typeof;
+VM450:1 Uncaught SyntaxError: Unexpected token ';'
+var g = 1000;
+undefined
+g = 200.90;
+200.9
+typeof g;
+"number"
+g = 1000000;
+1000000
+typeof g;
+"number"
+g = "Amit";
+"Amit"
+typeof g;
+"string"
+g = 'Amit';
+"Amit"
+typeof g;
+"string"
+g = `hfjkhgdjhgjkhfdgjkhfdjkg
+gdjjkgfdkh
+gdjfgjkhfdjgkdf`;
+"hfjkhgdjhgjkhfdgjkhfdjkg
+gdjjkgfdkh
+gdjfgjkhfdjgkdf"
+typeof g;
+"string"
+Number.MAX_SAFE_INTEGER
+9007199254740991
+var w = 100000000n;
+undefined
+typeof w;
+"bigint"
+var t = 1000;
+undefined
+typeof t;
+"number"
+t = true;
+true
+typeof t;
+"boolean"
+true + true
+2
+true + true + false
+2
+var a = 100;
+undefined
+var b = 200;'
+VM1039:1 Uncaught SyntaxError: Invalid or unexpected token
+var b = 200;
+undefined
+a + b
+300
+b = "200"
+"200"
+typeof b;
+"string"
+a + b;
+"100200"
+a + parseInt(b);
+300
+a + parseFloat("200.90");
+300.9
+ a + b;
+"100200"
+a - b;
+-100
+a * b;
+20000
+a/b;
+0.5
+10**3
+1000
+"Amit" +" Srivastava"
+"Amit Srivastava"
+"Amit" -" Srivastava"
+NaN
+var p = "ten thousand";
+
+undefined
+isNaN(p * 0.10)
+true
+isNaN(p * 0.10)?0:p * 0.10;
+0
+var z = p * 0.10;
+undefined
+z;
+NaN
+typeof z;
+"number"
+var f = 1000;
+undefined
+f / 0;
+Infinity
+isFinite(f/0)?f/0:0;
+0
+var z = f/0;
+undefined
+z;
+Infinity
+typeof z;
+"number"
+a + b;
+"100200"
+a  + parseInt(b)
+300
+var e1 ;
+undefined
+e1++;
+NaN
+isNaN(e1++)
+true
+isNaN(e1++)?0:e1++
+0
+var w1 = Number.MAX_SAFE_INTEGER;
+undefined
+w1;
+9007199254740991
+w1++
+9007199254740991
+w1++
+9007199254740992
+w1++
+9007199254740992
+w1++
+9007199254740992
+w1++
+9007199254740992
+typeof w1;
+"number"
+var g1 = 9007199254740992n;
+undefined
+g1++
+9007199254740992n
+g1++
+9007199254740993n
+g1++
+9007199254740994n
+g1++
+9007199254740995n
+g1++
+9007199254740996n
+// This is a Comment
+undefined
+/* this is a comment */
+undefined
+var arr = [100,200,300,400,500];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+arr;
+(5) [100, 200, 300, 400, 500]
+arr = ["amit",true,100,[90,100]];
+(4) ["amit", true, 100, Array(2)]
+arr[0];
+"amit"
+arr[1];
+true
+var f = [[1,2],[2,4],[5,5]];
+undefined
+arr;
+(4) ["amit", true, 100, Array(2)]
+typeof arr[0];
+"string"
+typeof arr[1]
+"boolean"
+typeof arr[2]
+"number"
+typeof arr[3]
+"object"
+var obj = {};
+undefined
+typeof obj;
+"object"
+obj instanceof Array;
+false
+obj instanceof Object;
+true
+arr;
+(4) ["amit", true, 100, Array(2)]
+arr instanceof Array;
+true
+arr instanceof Object;
+true
+"100"+"200"
+"100200"
+parseInt("100")+parseInt("200")
+300
+typeof Obj;
+"undefined"
