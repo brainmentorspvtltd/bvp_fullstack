@@ -1,0 +1,304 @@
+var a= "Amit";
+undefined
+typeof a;
+"string"
+var b = new String("Amit");
+undefined
+typeof String;
+"function"
+typeof b;
+"object"
+b.toUpperCase();
+"AMIT"
+b.toLowerCase();
+"amit"
+a;
+"Amit"
+typeof a;
+"string"
+a.toUpperCase();
+"AMIT"
+typeof String;
+"function"
+var e = new Number(100);
+undefined
+typeof e;
+"object"
+e instanceof Number;
+true
+var f = 100;
+undefined
+typeof f;
+"number"
+e;
+Number {100}
+f;
+100
+e++;
+100
+e;
+101
+typeof e;
+"number"
+e = new Number(1000);
+Number {1000}
+e;
+Number {1000}
+typeof e;
+"object"
+e = 1000;
+1000
+e;
+1000
+typeof e;
+"number"
+function show(){
+    console.log("I am Show ");
+}
+undefined
+typeof show;
+"function"
+show();
+VM834:2 I am Show 
+undefined
+var g = show;
+
+undefined
+g;
+ƒ show(){
+    console.log("I am Show ");
+}
+typeof g;
+"function"
+g();
+VM834:2 I am Show 
+undefined
+var g1 = 1000;
+undefined
+console.log(g1);
+VM1058:1 1000
+undefined
+var h = show();
+VM834:2 I am Show 
+undefined
+h;
+undefined
+typeof g;
+"function"
+var arr = [10,20,30];
+undefined
+var arr2 = arr;
+undefined
+arr2[0] = 10000;
+10000
+arr2;
+(3) [10000, 20, 30]
+arr;
+(3) [10000, 20, 30]
+e = 5;
+5
+document.write('Hello JS');
+undefined
+function test(){
+r = 100;
+console.log('I am r ', r);
+}
+undefined
+test();
+VM1462:3 I am r  100
+undefined
+r;
+100
+var f = 90;
+undefined
+f = [10,20];
+(2) [10, 20]
+typeof f;
+"object"
+function add(){
+console.log(' I am Add ');
+}
+undefined
+typeof add;
+"function"
+add();
+VM1684:2  I am Add 
+undefined
+add(10,20);
+VM1684:2  I am Add 
+undefined
+add("AMit",[90,100],true,10);
+VM1684:2  I am Add 
+undefined
+add;
+ƒ add(){
+console.log(' I am Add ');
+}
+console.dir(add);
+VM1954:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM1684:1[[Scopes]]: Scopes[1]
+undefined
+function add(){
+console.log(' I am Add ',arguments.length);
+}
+undefined
+add("AMit",[90,100],true,10);
+VM2027:2  I am Add  4
+undefined
+function add(){
+console.log('I is ',i) ; // undefined
+console.log(' I am Add ',arguments.length);
+for(var i = 0; i<arguments.length; i++){
+
+}
+console.log('I is ',i); // Value
+}
+undefined
+add(10,20);
+VM2225:2 I is  undefined
+VM2225:3  I am Add  2
+VM2225:7 I is  2
+undefined
+function add(){
+console.log('I is ',i) ; // Reference Error
+console.log(' I am Add ',arguments.length);
+for(let i = 0; i<arguments.length; i++){
+
+}
+console.log('I is ',i); // Value
+}
+undefined
+add(10,20);
+VM2291:2 Uncaught ReferenceError: i is not defined
+    at add (<anonymous>:2:21)
+    at <anonymous>:1:1
+add @ VM2291:2
+(anonymous) @ VM2297:1
+function add(){
+//console.log('I is ',i) ; // Reference Error
+//console.log(' I am Add ',arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+sum+=arguments[i];
+}
+return sum;
+//console.log('I is ',i); // Value
+}
+undefined
+add(10,20);
+30
+add();
+0
+add(1,2,3,4,5,6,7);
+28
+add(1,2,3,4,5,6,"7");
+"217"
+function add(){
+//console.log('I is ',i) ; // Reference Error
+//console.log(' I am Add ',arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+sum+=parseInt(arguments[i]);
+}
+return sum;
+//console.log('I is ',i); // Value
+}
+undefined
+add(1,2,3,4,5,6,"7");
+28
+parseInt("ten")
+NaN
+NaN+ 100
+NaN
+add(1,2,3,4,5,6,"ten");
+NaN
+function add(){
+//console.log('I is ',i) ; // Reference Error
+//console.log(' I am Add ',arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+//console.log('I is ',i); // Value
+}
+undefined
+var result = add(10,20,"30","ten");
+undefined
+result;
+60
+console.log(result);
+VM2859:1 60
+undefined
+function ten(){
+return 10;
+}
+undefined
+var w= ten;
+add(10,"10","ten",w);
+20
+parseInt(ten)
+NaN
+parseInt(ten())
+10
+function add(){
+//console.log('I is ',i) ; // Reference Error
+//console.log(' I am Add ',arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+if(typeof arguments[i]=="function"){
+arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+//console.log('I is ',i); // Value
+}
+undefined
+add(10,"10",ten,"ten");
+30
+function jQuery(){
+console.log("I am JQuery");
+}
+undefined
+jQuery("#id");
+VM3422:2 I am JQuery
+undefined
+jQuery(document);
+VM3422:2 I am JQuery
+undefined
+jQuery([10,20]);
+VM3422:2 I am JQuery
+undefined
+var $ = jQuery;
+undefined
+$("#id");
+VM3422:2 I am JQuery
+undefined
+$(document);
+VM3422:2 I am JQuery
+undefined
+function show(){
+console.log("I am Show ");
+}
+undefined
+show();
+VM3654:2 I am Show 
+undefined
+display();
+function display(){
+console.log('I am Display');
+}
+VM3784:3 I am Display
+undefined
+var f = 100;
+q();
+var q = function(){
+console.log('I am Function Expression');
+}
+VM3885:2 Uncaught TypeError: q is not a function
+    at <anonymous>:2:1
+(anonymous) @ VM3885:2
+ww = 1000
+1000
+rr = function(){}
+ƒ (){}
