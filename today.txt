@@ -1,0 +1,23 @@
+window;
+typeof window;
+window instanceof Window;
+var r = window.document.getElementsByTagName('input');
+typeof r;
+r instanceof Array;
+r instanceof HTMLCollection;
+r;
+r[0];
+r[1];
+typeof r[0];
+typeof r[1];
+r[1].value = "Srivastava";
+r[0].value = "Amit";
+window.document.getElementById('fname');
+window.document.getElementById('fname').value;
+window.document.getElementById('fname').value= "Amit";
+var name = "aMiT";
+name.charAt(0);
+name.charAt(0).toUpperCase();
+name.substring(1);
+name.substring(1).toLowerCase();
+name.charAt(0).toUpperCase() + name.substring(1).toLowerCase()
