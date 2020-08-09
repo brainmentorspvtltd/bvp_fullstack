@@ -1,0 +1,25 @@
+alert("Ur Record is Added ");
+undefined
+var e = prompt("Enter ur name");
+undefined
+e;
+"Amit"
+navigator.appCodeName;
+"Mozilla"
+navigator.appVersion
+"5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
+navigator.cookieEnabled;
+true
+navigator.language
+"en-GB"
+"en-GB"
+window.screen
+Screen {availWidth: 1280, availHeight: 697, width: 1280, height: 800, colorDepth: 30, …}availHeight: 697availLeft: 0availTop: 23availWidth: 1280colorDepth: 30height: 800orientation: ScreenOrientation {angle: 0, type: "landscape-primary", onchange: null}pixelDepth: 30width: 1280__proto__: Screen
+screen.width;
+1280
+screen.height;
+800
+VM199:2 Uncaught SyntaxError: Unexpected token '{'
+location.href;
+"http://127.0.0.1:5500/greetapp/index.html"
+"http://127.0.0.1:5500/greetapp/index.html"
