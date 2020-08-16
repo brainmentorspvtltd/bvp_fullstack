@@ -1,0 +1,173 @@
+var a= 10;
+var b = 20;
+var c = a+ b;
+console.log('Sum is ',c);
+setTimeout(function(){
+console.log('I will call after 5 sec ');
+},5000);
+console.log('I am end ');
+VM355:4 Sum is  30
+VM355:8 I am end 
+undefined
+VM355:6 I will call after 5 sec 
+var a= 10;
+var b = 20;
+var c = a+ b;
+console.log('Sum is ',c);
+setTimeout(function(){
+document.write('I will call after 5 sec ');
+},5000);
+console.log('I am end ');
+VM385:4 Sum is  30
+VM385:8 I am end 
+undefined
+function iamAsync(){
+setTimeout(function(){
+console.log("I am After 5 Sec Going to Return ");
+return "I am The Result of Async ";
+//document.write('I will call after 5 sec ');
+},5000);
+}
+var a= 10;
+var b = 20;
+var c = a+ b;
+console.log('Sum is ',c);
+var x = iamAsync();
+console.log('x is ',x);
+
+VM648:11 Sum is  30
+VM648:13 x is  undefined
+undefined
+VM648:3 I am After 5 Sec Going to Return 
+function giveMeResult(result){
+console.log(" I am the Result ",result);
+}
+function iamAsync(fn){
+setTimeout(function(){
+console.log("I am After 5 Sec Going to Return ");
+fn("I am the Result of Async"); // I am Calling the CallBack
+//return "I am The Result of Async ";
+//document.write('I will call after 5 sec ');
+},5000);
+}
+var a= 10;
+var b = 20;
+var c = a+ b;
+console.log('Sum is ',c);
+//var x = iamAsync();
+iamAsync(giveMeResult);
+console.log('Last Line');
+
+VM937:15 Sum is  30
+VM937:18 Last Line
+undefined
+VM937:6 I am After 5 Sec Going to Return 
+VM937:2  I am the Result  I am the Result of Async
+function fail(err){
+console.log(" I am Fail Error ",err);
+}
+function giveMeResult(result){
+console.log(" I am the Result ",result);
+}
+function iamAsync(fn){
+var a = 10;
+setTimeout(function(){
+console.log("I am After 5 Sec Going to Return ");
+if(a>10){
+fn("I am the Result of Async"); // I am Calling the CallBack
+}
+else{
+//return "I am The Result of Async ";
+//document.write('I will call after 5 sec ');
+},5000);
+}
+var a= 10;
+var b = 20;
+var c = a+ b;
+console.log('Sum is ',c);
+//var x = iamAsync();
+iamAsync(giveMeResult);
+console.log('Last Line');
+
+VM1051:17 Uncaught SyntaxError: Unexpected token ','
+function fail(err){
+console.log(" I am Fail Error ",err);
+}
+function giveMeResult(result){
+console.log(" I am the Result ",result);
+}
+function iamAsync(success,fail){
+var a = 10;
+setTimeout(function(){
+console.log("I am After 5 Sec Going to Return ");
+if(a>10){
+success("I am the Result of Async"); // I am Calling the CallBack
+}
+else{
+fail("Some Error Occur ");
+}
+//return "I am The Result of Async ";
+//document.write('I will call after 5 sec ');
+},5000);
+}
+var a= 10;
+var b = 20;
+var c = a+ b;
+console.log('Sum is ',c);
+//var x = iamAsync();
+iamAsync(giveMeResult);
+console.log('Last Line');
+
+VM1127:24 Sum is  30
+VM1127:27 Last Line
+undefined
+VM1127:10 I am After 5 Sec Going to Return 
+VM1127:15 Uncaught TypeError: fail is not a function
+    at <anonymous>:15:1
+(anonymous) @ VM1127:15
+setTimeout (async)
+iamAsync @ VM1127:9
+(anonymous) @ VM1127:26
+function fail(err){
+console.log(" I am Fail Error ",err);
+}
+function giveMeResult(result){
+console.log(" I am the Result ",result);
+}
+function iamAsync(success,fail){
+var a = 10;
+setTimeout(function(){
+console.log("I am After 5 Sec Going to Return ");
+if(a>10){
+success("I am the Result of Async"); // I am Calling the CallBack
+}
+else{
+fail("Some Error Occur ");
+}
+//return "I am The Result of Async ";
+//document.write('I will call after 5 sec ');
+},5000);
+}
+var a= 10;
+var b = 20;
+var c = a+ b;
+console.log('Sum is ',c);
+//var x = iamAsync();
+iamAsync(giveMeResult, fail);
+console.log('Last Line');
+
+VM1161:24 Sum is  30
+VM1161:27 Last Line
+undefined
+VM1161:10 I am After 5 Sec Going to Return 
+VM1161:2  I am Fail Error  Some Error Occur 
+var a = "100+ 200-10";
+undefined
+eval(a)
+290
+var a = "100+ 200*10";
+undefined
+a;
+"100+ 200*10"
+eval(a)
+2100
