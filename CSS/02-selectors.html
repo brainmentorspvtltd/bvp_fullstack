@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #parent_1 {
+            background-color: lightcoral;
+        }
+        #parent_2 {
+            background-color: lightgray;
+        } */
+        .section {
+            border: 2px dashed red;
+        }
+        /* Nested Selector */
+        /* #parent_1 h2 {
+            color: blue;
+        } */
+        /* #parent_1 .child_1 h2 {
+            color: blue;
+        } */
+
+        /* Combinators */
+        #parent_1 > h2 {
+            color: blue;
+        }
+
+        /* Attribute Selector */
+        #login input[type='submit'] {
+            background-color: lightblue;
+        }
+
+        #login input[type='submit']:hover {
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selectors</h1>
+
+    <!-- Id and Class -->
+    <!-- - id represented by # -->
+    <!-- - class represented by . -->
+
+    <div id="parent_1" class="section section_2">
+        <h2>This heading is inside div</h2>
+        <div class="child_1">
+            <h2>This heading is inside child</h2>
+        </div>
+        <h2>This heading is inside div</h2>
+    </div>
+
+    <hr>
+
+    <div id="parent_2" class="section">
+        <h2>This heading is inside div</h2>
+        <div class="child_1">
+            <h2>This heading is inside child</h2>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="login">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="password">
+        <input type="submit">
+    </div>
+    
+</body>
+</html>
