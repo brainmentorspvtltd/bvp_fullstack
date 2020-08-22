@@ -1,0 +1,53 @@
+function iamAsync(success,fail){
+var a = 10;
+setTimeout(function(){
+console.log("I am After 5 Sec Going to Return ");
+if(a>10){
+success("I am the Result of Async"); // I am Calling the CallBack
+}
+else{
+fail("Some Error Occur ");
+}
+//return "I am The Result of Async ";
+//document.write('I will call after 5 sec ');
+},5000);
+}
+undefined
+function fail(err){
+console.log(" I am Fail Error ",err);
+}
+undefined
+function giveMeResult(result){
+console.log(" I am the Result ",result);
+}
+undefined
+iamAsync(giveMeResult,fail);
+undefined
+VM101:4 I am After 5 Sec Going to Return 
+VM107:2  I am Fail Error  Some Error Occur 
+function delData(){
+var pr = new Promise(function(resolve, reject){
+setTimeout(function(){
+    let x = 10;
+    let y = 20;
+    console.log('I call after 5 sec ');
+    resolve("I am the Data From Async "+(x+y));
+},5000);
+});
+
+return pr;
+}
+undefined
+var p = delData();
+console.log('P is ',p);
+p.then(function(data){
+console.log('I Rec the Data ',data);
+}).catch(function(err){
+console.log('Error is ',err);
+});
+VM1030:2 P is  Promise {<pending>}
+Promise {<pending>}
+VM707:6 I call after 5 sec 
+VM1030:4 I Rec the Data  I am the Data From Async 30
+p;
+Promise {<fulfilled>: "I am the Data From Async 30"}
